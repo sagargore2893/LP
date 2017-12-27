@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25313" started-at="2017-10-04T07:17:40Z" finished-at="2017-10-04T07:18:05Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25313" started-at="2017-10-04T07:17:40Z" finished-at="2017-10-04T07:18:05Z">
+      <class name="com.silicus.LampsPlus.testscripts.HomepageTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.silicus.LampsPlus.testscripts.HomepageTest@5c3bd550]" name="SetUp" is-config="true" duration-ms="18116" started-at="2017-10-04T12:47:40Z" finished-at="2017-10-04T12:47:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="To_test_homepage_loads_correctly()[pri:0, instance:com.silicus.LampsPlus.testscripts.HomepageTest@5c3bd550]" name="To_test_homepage_loads_correctly" duration-ms="11" started-at="2017-10-04T12:47:58Z" finished-at="2017-10-04T12:47:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_test_homepage_loads_correctly -->
+        <test-method status="PASS" signature="To_Verify_all_links_or_image()[pri:1, instance:com.silicus.LampsPlus.testscripts.HomepageTest@5c3bd550]" name="To_Verify_all_links_or_image" duration-ms="7171" started-at="2017-10-04T12:47:58Z" finished-at="2017-10-04T12:48:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- To_Verify_all_links_or_image -->
+      </class> <!-- com.silicus.LampsPlus.testscripts.HomepageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
