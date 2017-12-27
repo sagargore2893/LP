@@ -4,11 +4,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Random;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class TestBase {
@@ -20,6 +25,7 @@ public class TestBase {
 	
 	public void init() throws InterruptedException, IOException{
 	loadPropertiesFile();
+	selectBrowser(Repositary.getProperty("browser"));
 	driver.get(Repositary.getProperty("url"));
 	Thread.sleep(5000);
 	
@@ -56,5 +62,22 @@ public class TestBase {
 		return null;
 	}
 	
+	public void browserQuite()
+	{
+		driver.quit();
+	}
 	
+	public String randomEmailId()
+	{
+		Random randomemail =new Random();
+		int randomInt = randomemail.nextInt(1000);
+		String RandomEail = "user"+randomInt+"@mailinator.com";
+		return RandomEail;
+	}
+
+	public void Explicit_Wait(){
+		WebDriverWait wait =new WebDriverWait(driver,10);
+		WebElement element = wait.until(ExpectedConditions.)));
+	}
+
 }
