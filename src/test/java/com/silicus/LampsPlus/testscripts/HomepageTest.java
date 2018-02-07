@@ -9,15 +9,16 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.silicus.LampsPlus.CommonMethods.BaseTest;
 import com.silicus.LampsPlus.Pagelibrary.HomePage;
-import com.silicus.LampsPlus.testbase.TestBase;
 
-public class HomepageTest extends TestBase {
+
+public class HomepageTest extends BaseTest {
 		HomePage homepage;
 		
 	@BeforeTest
 	public void SetUp() throws InterruptedException, IOException{
-		init();
+		setDriver();
 	}
 
 	@Test(priority=0)
