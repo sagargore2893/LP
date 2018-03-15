@@ -16,9 +16,6 @@ public class HomePage extends BasePage {
 	private WebElement splashImage;
 	
 
-	/**
-	 * @param driver
-	 */
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}

@@ -24,12 +24,13 @@ public class BaseTest {
 		return driver;
 	}
 	
+//	@Parameters("browser")
 	@BeforeMethod
 	public void setDriver() throws InterruptedException, IOException{
 	loadPropertiesFile();
 	selectBrowser(Repositary.getProperty("browser"));
 	driver.get(Repositary.getProperty("url"));
-	Thread.sleep(5000);
+//	Thread.sleep(5000);
 	
 	}
 	
@@ -40,23 +41,24 @@ public class BaseTest {
 		Repositary.load(fi);
 	}
 	
+	
 	public WebDriver selectBrowser (String browser)
 	{
 		if(browser.equals("FIREFOX")|| browser.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//src//main//java//com//silicus//LampsPlus//browserproperty//geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//BrowserExe//geckodriver.exe");
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			return driver;
 		}else if(browser.equals("CHROME")||browser.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//src//main//java//com//silicus//LampsPlus//browserproperty//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//BrowserExe//chromedriver.exe");
 		    driver = new ChromeDriver();
 		    driver.manage().window().maximize();
 		    return driver;
 		}else if(browser.equals("IE")||browser.equals("ie"))
 		{
-			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"//src//main//java//com//silicus//LampsPlus//browserproperty//IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"//BrowserExe//IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 			return driver;

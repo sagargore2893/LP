@@ -6,7 +6,10 @@
       <class name="com.silicus.LampsPlus.testscripts.HomepageTest">
         <methods>
           <include name="SetUp"/>
+          <include name="browserClose"/>
           <include name="To_test_homepage_loads_correctly"/>
+          <include name="To_Verify_all_links_or_image"/>
+          <include name="setDriver"/>
         </methods>
       </class> <!-- com.silicus.LampsPlus.testscripts.HomepageTest -->
     </classes>
